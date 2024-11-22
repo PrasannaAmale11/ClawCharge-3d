@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    text-transform: uppercase;
+}
+
+html, body{
+    width: 100vw;
+    height: 500vh;
+    background: linear-gradient(0deg,#dbdad9,#ffffff);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1{
+    text-align: center;
+    font-size: 10vw;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+h2{
+    font-size: 2.5vw;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+p{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fefdfd;
+}
+section{
+    position: relative;
+    width: 100vw;
+    height: 100vh
+    ;display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    z-index: 2;
+}
+
+.hero h1{
+    margin-bottom: 0.25em;
+}
+
+.hero p{
+    width: 50%;
+    text-align: center;
+}
+
+.info {
+    gap: 8em;
+}
+
+.info .tags{
+    width: 60%;
+    display: flex;
+    gap: 2em;
+}
+
+.info h2{
+    width: 75%;
+    text-align: center;
+}
+
+.info p{
+    width: 60%;
+    text-align: center;
+}
+
+.scan-info{
+position: absolute;
+top: 0;
+width: 100vw;
+display: flex;
+justify-content: space-between;
+padding: 2em;
+}
+
+.scan-container{
+    width: 300px;
+    margin-top: 270px;
+    height: 560px;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    position: relative;
+   
+}
+.barcode{
+    position: absolute;
+    bottom: 7em;
+    left: 43%;
+    height: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 151px;
+}
+
+.scan-light{
+    height: 2px;
+    width: 90%;
+    background-color: red;
+    z-index: 2;
+    display: none;
+    top: 0;
+    transition: all 1s ease;
+    position: absolute;
+    -webkit-box-shadow:0px 0px 22px 1px rgba(255,46,46,0.74);
+    -moz-box-shadow: 0px 0px 22px 1px rgba(255,46,46,0.74);
+    box-shadow: 0px 0px 22px 1px rgba(255,46,46,0.74);
+}
+
+#insidePurchased{
+    width: 150px;
+    height: 30px;
+    border: 1px solid red;
+    border-radius: 1.5em;
+    position: absolute;
+    bottom: 1rem;
+    right: 0.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.purchased{
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    padding: 0.5em 4em;
+    color: red;
+    border: 1px solid red;
+    border-radius: 2em;
+}
+
+.outro h2{
+    width: 70%;
+    text-align: center;
+}
+
+.lenis .lenis-smooth{
+    scroll-behavior: auto !important;
+}
+
+.lenis .lenis-smooth [data-lenis-prevent]{
+    overscroll-behavior: contain;
+}
+
+.lenis .lenis-stopped{
+    overflow: clip;
+}
+
+.lenis .lenis-smooth iframe{
+    pointer-events: none;
+}
+
+/* --------Recipt------  */
+.container{
+    position: relative;
+}
+
+.bold {
+    font-weight: bold;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .receipt {
+    width: 300px;
+    font-family: "VT323", monospace !important;
+    color: #1f1f1f;
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 5px 5px 19px #ccc;
+    padding: 10px;
+    position: fixed;
+    right: 1%;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-bottom: 30px;
+  }
+  
+  .logo {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+  }
+  
+  
+  .address {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .transactionDetails {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 10px;
+    flex-wrap: wrap;
+  }
+  .transactionDetails .detail {
+    text-transform: uppercase;
+  }
+  
+  .centerItem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  
+  .survey {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .survey .surveyID {
+    font-size: 20px;
+  }
+  
+  .paymentDetails {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .creditDetails {
+    margin: 10px auto;
+    width: 230px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  .receiptBarcode {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .returnPolicy {
+    margin: 10px 20px;
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .coupons {
+    margin-top: 20px;
+  }
+  
+  .tripSummary {
+    margin: auto;
+    width: 255px;
+  }
+  .tripSummary .item {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 220px;
+  }
+  
+  .feedback {
+    margin: 20px auto;
+  }
+  .feedback h3.clickBait {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .feedback h4.web {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+  }
+   .break {
+    margin-top: 1rem;
+   border-top: 1px dashed black;
+   height: 1px;
+  }
+  
+
+
+/*mobile-only message */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        background: #fefdfd;
+    }
+    
+    body * {
+        display: none;
+    }
+    
+    body::before {
+        content: "Please view this site on a laptop or PC.";
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+    }
+}
